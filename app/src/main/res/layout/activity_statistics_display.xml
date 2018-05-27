@@ -5,101 +5,120 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".StatisticsDisplayActivity">
-    <android.support.v7.widget.CardView
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
+        android:background="#c4ead2fa"
+        android:paddingBottom="5dp"
+
+        android:paddingTop="5dp" />
+
+    <android.support.v7.widget.CardView
         android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:paddingBottom="20dp"
-        android:elevation="10dp">
+        android:layout_marginRight="10dp"
+        android:elevation="10dp"
+        android:paddingBottom="20dp">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <TextView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:text="#"
 
-            android:textSize="30dp"
-            android:gravity="center"
-            android:id="@+id/tag"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/circle_shape"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="#hashtag"
-            android:layout_toRightOf="@id/tag"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/hasttag_title"
-            android:gravity="center_vertical"
-            android:textSize="32dp"
-            android:textStyle="bold"
-           />
-          <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="15dp"
-              android:id="@+id/view_tweets"
-              android:layout_marginBottom="15dp"
-              android:layout_below="@id/hasttag_title">
-              <TextView
-                  android:layout_width="0dp"
-                  android:layout_weight="1"
-                  android:textSize="20sp"
-                  android:paddingTop="5dp"
-                  android:layout_marginLeft="10dp"
+            <TextView
+                android:id="@+id/tag"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
 
-                  android:drawableLeft="@drawable/twitter_vector"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circle_shape"
+                android:gravity="center"
+                android:text="#"
+                android:textSize="30dp" />
 
-                  android:paddingBottom="5dp"
-                  android:layout_height="match_parent"
-                  android:text="Tweets"/>
-              <TextView
-                  android:layout_width="0dp"
-                  android:layout_weight="1"
-                  android:textSize="20sp"
-                  android:layout_marginLeft="10dp"
-                  android:paddingTop="5dp"
-                  android:drawableLeft="@drawable/vector_exposure"
-                  android:paddingBottom="5dp"
-                  android:layout_height="match_parent"
-                  android:text="Views"/>
+            <TextView
+                android:id="@+id/hasttag_title"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/tag"
+                android:gravity="center_vertical"
+                android:text="#hashtag"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-          </LinearLayout>
+            <LinearLayout
+                android:id="@+id/view_tweets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hasttag_title"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/h_tweets"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/twitter_vector"
+                    android:paddingBottom="5dp"
+
+                    android:paddingTop="5dp"
+                    android:text="Tweets"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/h_views"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/vector_exposure"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Views"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_below="@id/view_tweets"
                 android:layout_marginBottom="15dp"
-                android:layout_below="@id/view_tweets">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:textSize="20sp"
-                    android:paddingTop="5dp"
-                    android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp">
 
-                    android:drawableLeft="@drawable/twitter_vector"
-
-                    android:paddingBottom="5dp"
-                    android:layout_height="match_parent"
-                    android:text="Retweets"/>
                 <TextView
+                    android:id="@+id/h_retweets"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:textSize="20sp"
-                    android:layout_marginLeft="10dp"
-                    android:paddingTop="5dp"
-                    android:drawableLeft="@drawable/vector_exposure"
-                    android:paddingBottom="5dp"
                     android:layout_height="match_parent"
-                    android:text="Mentions"/>
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+
+                    android:drawableLeft="@drawable/ic_swap_calls_black_24dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Retweets"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/h_mentions"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/influencer_vector"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Mentions"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -110,53 +129,58 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:elevation="10dp"
+        android:layout_below="@id/card_view"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_below="@id/card_view">
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="10dp">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:id="@+id/rl_2"
 
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
-                android:text="#"
-                android:padding="15dp"
-                 android:id="@+id/hhobj"
-                android:textSize="30dp"
-                android:gravity="center"
-                android:src="@drawable/influencer_vector"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:background="@drawable/circle_shape"/>
+            <RelativeLayout
+                android:id="@+id/rl_2"
+                android:layout_width="match_parent"
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Influencers"
-            android:layout_toRightOf="@id/hhobj"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center_vertical"
-            android:textSize="32dp"
-            android:textStyle="bold"
-            />
-        </RelativeLayout>
+                android:layout_height="wrap_content">
 
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="fill_parent"
-            android:layout_below="@id/rl_2"
-            android:id="@+id/influenncer_recylcer_view"
+                <ImageView
+                    android:id="@+id/hhobj"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/circle_shape"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:src="@drawable/influencer_vector"
+                    android:text="#"
+                    android:textSize="30dp" />
 
-            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/hhobj"
+                    android:gravity="center_vertical"
+                    android:text="Influencers"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/influenncer_recylcer_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_2"
+                android:paddingBottom="20dp"
+
+                android:paddingLeft="10dp"></android.support.v7.widget.RecyclerView>
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>

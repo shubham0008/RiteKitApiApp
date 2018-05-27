@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.ritekittaskapp.appkca.Model.InfluencerModel;
 import com.ritekittaskapp.appkca.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -41,7 +42,7 @@ public class InfluencerAdapter extends RecyclerView.Adapter<InfluencerAdapter.In
 
     @Override
     public InfluencerAdapter.InfluencerViewHolder onCreateViewHolder(ViewGroup parent,
-                                                               int viewType) {
+                                                                     int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.influencer_layout, parent, false);
         return new InfluencerAdapter.InfluencerViewHolder(view);
     }
@@ -50,7 +51,8 @@ public class InfluencerAdapter extends RecyclerView.Adapter<InfluencerAdapter.In
     @Override
     public void onBindViewHolder(InfluencerAdapter.InfluencerViewHolder holder, final int position) {
         holder.name.setText(influencers.get(position).getIname().toString());
-        holder.tweets.setText(influencers.get(position).getIfollowers()+"");
+        holder.tweets.setText(influencers.get(position).getIfollowers() + "");
+        Picasso.with(context).load(influencers.get(position).getIphotoUrl()).into(holder.photo);
 
 
     }

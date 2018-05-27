@@ -48,7 +48,7 @@ public class HashtagListAdapter extends RecyclerView.Adapter<HashtagListAdapter.
 
     @Override
     public HashtagListAdapter.TagViewHolder onCreateViewHolder(ViewGroup parent,
-                                                            int viewType) {
+                                                               int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.hashtag_row_layout, parent, false);
         return new TagViewHolder(view);
     }
@@ -57,13 +57,13 @@ public class HashtagListAdapter extends RecyclerView.Adapter<HashtagListAdapter.
     @Override
     public void onBindViewHolder(TagViewHolder holder, final int position) {
 
-        holder.tagTitle.setText("#"+tags.get(position).getHtag());
-        holder.views.setText(tags.get(position).getHexposure()+"");
+        holder.tagTitle.setText("#" + tags.get(position).getHtag());
+        holder.views.setText((int) tags.get(position).getHexposure() / 1000000 + "M");
         holder.tagsLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                context.startActivity(new Intent(context, StatisticsDisplayActivity.class).putExtra("tag",tags.get(position).getHtag()).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                context.startActivity(new Intent(context, StatisticsDisplayActivity.class).putExtra("tag", tags.get(position).getHtag()).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             }
         });
     }
