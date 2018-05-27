@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatisticsDisplayActivity">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:id="@+id/card_view"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="20dp"
+        android:elevation="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="#"
+
+            android:textSize="30dp"
+            android:gravity="center"
+            android:id="@+id/tag"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/circle_shape"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="#hashtag"
+            android:layout_toRightOf="@id/tag"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/hasttag_title"
+            android:gravity="center_vertical"
+            android:textSize="32dp"
+            android:textStyle="bold"
+           />
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="15dp"
+              android:id="@+id/view_tweets"
+              android:layout_marginBottom="15dp"
+              android:layout_below="@id/hasttag_title">
+              <TextView
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:textSize="20sp"
+                  android:paddingTop="5dp"
+                  android:layout_marginLeft="10dp"
+
+                  android:drawableLeft="@drawable/twitter_vector"
+
+                  android:paddingBottom="5dp"
+                  android:layout_height="match_parent"
+                  android:text="Tweets"/>
+              <TextView
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:textSize="20sp"
+                  android:layout_marginLeft="10dp"
+                  android:paddingTop="5dp"
+                  android:drawableLeft="@drawable/vector_exposure"
+                  android:paddingBottom="5dp"
+                  android:layout_height="match_parent"
+                  android:text="Views"/>
+
+          </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_below="@id/view_tweets">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:paddingTop="5dp"
+                    android:layout_marginLeft="10dp"
+
+                    android:drawableLeft="@drawable/twitter_vector"
+
+                    android:paddingBottom="5dp"
+                    android:layout_height="match_parent"
+                    android:text="Retweets"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:drawableLeft="@drawable/vector_exposure"
+                    android:paddingBottom="5dp"
+                    android:layout_height="match_parent"
+                    android:text="Mentions"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:elevation="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/card_view">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/rl_2"
+
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="#"
+                android:padding="15dp"
+                 android:id="@+id/hhobj"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:src="@drawable/influencer_vector"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/circle_shape"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Influencers"
+            android:layout_toRightOf="@id/hhobj"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="fill_parent"
+            android:layout_below="@id/rl_2"
+            android:id="@+id/influenncer_recylcer_view"
+
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
